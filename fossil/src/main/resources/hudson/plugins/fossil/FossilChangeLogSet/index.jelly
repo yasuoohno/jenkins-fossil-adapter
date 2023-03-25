@@ -1,3 +1,4 @@
+<?jelly escape-by-default='true'?>
 <!--
   Displays Fossil change log and creates links to the Fossil-hosted repository browser.
 -->
