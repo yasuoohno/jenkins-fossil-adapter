@@ -10,6 +10,7 @@ import hudson.model.Describable;
 import hudson.model.Descriptor;
 import hudson.model.TaskListener;
 import hudson.model.TaskThread;
+import hudson.model.Run;
 import hudson.model.AbstractBuild;
 import hudson.model.listeners.SCMListener;
 import hudson.scm.ChangeLogSet;
@@ -49,8 +50,8 @@ public class FossilTagAction extends AbstractScmTagAction implements Describable
      * construct a Fossil Tag Action object.
      * @param build 
      */
-    protected FossilTagAction(AbstractBuild<?,?> build) {
-        super(build);
+    protected FossilTagAction(Run<?,?> run) {
+        super(run);
         new FossilTagListener().register();
     }
 
